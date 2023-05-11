@@ -47,6 +47,7 @@ account cost "Project Cost" {
   account wFront "Web Front-End"
   account mFront "Mobile Front-End"
   account back "Back-End"
+  account tcloud "Despliegue"
 }
 account rev "Payments"
 # The Profit&Loss analysis should be rev - cost accounts.
@@ -152,6 +153,7 @@ task WMGame "Web & Mobile Game" {
     chargeset mFront
     responsible dev3
     depends WMGame.tback.tBEd
+
     task tGUId "Mobile GUI Design" {
       effort 6d
       actual:effort 13d
@@ -172,6 +174,14 @@ task WMGame "Web & Mobile Game" {
       allocate dev1
       depends WMGame.tmobF.tFEc
     }    
+  }
+
+  task tcloud "Despliegue" {
+    purge chargeset
+    chargeset Cloud
+    responsible boss
+    depends WMGame.tmobF.tFEt
+
   }
 
   task ttest "Accpetance tests" {
