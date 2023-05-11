@@ -58,6 +58,14 @@ resource boss "Liz Bullock" {
   actual:leaves project 2023-05-07 - 2023-05-12
   rate 160
 }
+
+resource boss2 "Luis Catalan" {
+  email "774274@unizar.es"
+  actual:leaves project 2023-05-07 - 2023-05-12
+  rate 160
+  workinghours mon - fri 8:00 - 12:00
+}
+
 resource dev1 "Paul Smith" {
   email "hhhh@unizar.es"
 }
@@ -124,7 +132,7 @@ task WMGame "Web & Mobile Game" {
   task twebF "Web Front End" {
     purge chargeset
     chargeset wFront
-    responsible dev3
+    responsible dev3,boss2
     depends WMGame.tback.tBEd
     task tGUId "Web GUI Design" {
       effort 9d
