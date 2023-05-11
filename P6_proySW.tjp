@@ -267,7 +267,7 @@ textreport frame "" {
     center '<[report id="overview"]>'
   }
 
-  textreport overvi "overviewPlanIni" {
+  textreport planini "overviewPlanIni" {
     formats html
     center '<[report id="overviewPlanIni"]>'
   }
