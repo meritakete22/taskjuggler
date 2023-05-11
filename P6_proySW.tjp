@@ -318,7 +318,7 @@ taskreport overview "" {
   caption 'All effort values are in man days.'
 }
 
-# A traditional Gantt chart with a project overview.
+# A traditional Gantt chart with a project overview plani ini.
 taskreport overviewPlanIni"" {
   scenarios actual
   headline "Planificacion inicial"
